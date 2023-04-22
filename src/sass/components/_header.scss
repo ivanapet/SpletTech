@@ -1,0 +1,71 @@
+@import "../utilities/variables.scss";
+
+header {
+  height: 100px;
+  padding: 2rem 0;
+
+  .container {
+    .header-wrapper {
+      display: flex;
+
+      .logo {
+        img {
+          width: 50%;
+        }
+      }
+
+      .navigation {
+        display: none;
+        gap: 1rem;
+        align-items: center;
+
+        &__list {
+          display: flex;
+          align-items: center;
+
+          &__item {
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 1rem;
+            color: $primary1;
+            transition: all 100ms linear;
+
+            &:hover {
+              background-color: $primary2;
+              color: $primary4;
+            }
+          }
+        }
+
+        &__button {
+          padding: 1rem;
+          background-color: $accent2;
+          white-space: nowrap;
+          border: 1px solid transparent;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all 100ms linear;
+          outline: none;
+          width: fit-content;
+          height: fit-content;
+
+          &__text {
+            font-size: 1rem;
+            font-weight: 600;
+            color: $primary4;
+            text-transform: uppercase;
+          }
+
+          &:hover {
+            background-color: $accent1;
+          }
+        }
+
+        @include xl {
+          display: flex;
+        }
+      }
+    }
+  }
+}

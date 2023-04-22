@@ -1,0 +1,35 @@
+.container {
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    max-width: 540px;
+    margin: 0 auto;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+  // X large devices (XL desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  // XX large devices (XXL desktops, 1400px and up)
+  @media (min-width: 1400px) {
+    max-width: 1320px;
+    margin: 0 auto;
+  }
+}
+
+.container-fluid {
+  width: 100%;
+}
