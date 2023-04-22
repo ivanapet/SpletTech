@@ -3,6 +3,9 @@ $primary1: #d4f1f4;
 $primary2: #75e6da;
 $primary3: #189ab4;
 $primary4: #05445e;
+$primary4-darker: #032d3f;
+
+$primary4-hover: #03334887;
 
 $accent1: #fff4bd;
 $accent2: #f4b9b8;
@@ -60,5 +63,44 @@ $breakpoints: (
 @mixin breakpoint($customBreakpoint: 0) {
   @media (min-width: $customBreakpoint) {
     @content;
+  }
+}
+
+//  text mixins
+@mixin h1 {
+  font-size: 2.625rem;
+  font-family: $brunoAce;
+
+  @include md {
+    font-size: 3rem;
+  }
+  @include xl {
+    font-size: 3.5rem;
+  }
+}
+
+@mixin h3 {
+  font-size: 1.5rem;
+  font-family: $raleway;
+
+  @include md {
+    font-size: 2rem;
+  }
+  @include xl {
+    font-size: 1.75rem;
+  }
+}
+
+@mixin p {
+  font-size: 0.75rem;
+  line-height: 2rem;
+  font-family: $raleway;
+
+  @include sm {
+    font-size: 1rem;
+  }
+  @include lg {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
   }
 }

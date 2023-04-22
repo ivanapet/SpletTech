@@ -1,0 +1,53 @@
+@import "../utilities/variables.scss";
+
+main {
+  .apply {
+    &__info {
+      display: flex;
+      flex-direction: column;
+      padding: 5rem 0;
+      align-items: center;
+      justify-content: space-between;
+      gap: 3rem;
+
+      &__text {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 2rem;
+        color: $primary1;
+
+        @include lg {
+          gap: 3.5rem;
+        }
+      }
+
+      &__img {
+        flex: 1;
+        min-height: 300px;
+        z-index: 1000;
+        overflow: hidden;
+
+        img {
+          @include md {
+            width: 150%;
+          }
+        }
+      }
+
+      h1 {
+        @include h1;
+      }
+      h3 {
+        @include h3;
+      }
+      p {
+        @include p;
+      }
+
+      @include lg {
+        flex-direction: row;
+      }
+    }
+  }
+}
