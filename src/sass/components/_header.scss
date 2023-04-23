@@ -1,167 +1,167 @@
 @import "../utilities/variables.scss";
 
 header {
-  padding: 2rem 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: $primary4;
-  background-image: linear-gradient(-65deg, $primary3, $primary4);
-  z-index: 1000;
+	padding: 2rem 0;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $primary4;
+	background-image: linear-gradient(-65deg, $primary3, $primary4);
+	z-index: 1000;
 
-  .container {
-    .header-wrapper {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+	.container {
+		.header-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
 
-      .logo {
-        img {
-          width: 50%;
+			.logo {
+				img {
+					width: 50%;
 
-          @include xl {
-            width: 90%;
-          }
-        }
-      }
-      .nav-toggler {
-        display: flex;
-        top: 2rem;
-        right: 2rem;
-        flex-direction: column;
-        gap: 6px;
-        background-color: transparent;
-        outline: none;
-        box-shadow: 2px 2px 6px $primary4-hover;
-        border: none;
-        width: fit-content;
-        padding: 1rem;
+					@include xl {
+						width: 90%;
+					}
+				}
+			}
+			.nav-toggler {
+				display: flex;
+				top: 2rem;
+				right: 2rem;
+				flex-direction: column;
+				gap: 6px;
+				background-color: transparent;
+				outline: none;
+				box-shadow: 2px 2px 6px $primary4-hover;
+				border: none;
+				width: fit-content;
+				padding: 1rem;
 
-        &__icon {
-          width: 2rem;
-          height: 2px;
-          background-color: $primary1;
-          transition: transform 250ms ease-in-out;
-        }
+				&__icon {
+					width: 2rem;
+					height: 2px;
+					background-color: $primary1;
+					transition: transform 250ms ease-in-out;
+				}
 
-        @include xl {
-          display: none;
-        }
-      }
+				@include xl {
+					display: none;
+				}
+			}
 
-      .navigation {
-        display: none;
-        transform: translateX(0);
-        gap: 1rem;
-        align-items: center;
-        top: 0;
-        right: 0;
-        transition: all 300ms linear;
+			.navigation {
+				display: none;
+				transform: translateX(0);
+				gap: 1rem;
+				align-items: center;
+				top: 0;
+				right: 0;
+				transition: all 300ms linear;
 
-        &__wrapper {
-          display: none;
+				&__wrapper {
+					display: none;
 
-          &__list {
-            display: flex;
-            align-items: center;
+					&__list {
+						display: flex;
+						align-items: center;
 
-            &__item {
-              padding: 1rem;
-              transition: all 100ms linear;
+						&__item {
+							padding: 1rem;
+							transition: all 100ms linear;
 
-              a {
-                text-transform: uppercase;
-                font-size: 1.25rem;
-                font-weight: 600;
-                color: $primary1;
-                padding: 1rem;
-                margin: -1rem;
-                transition: all 100ms linear;
-              }
+							a {
+								text-transform: uppercase;
+								font-size: 1.25rem;
+								font-weight: 600;
+								color: $primary1;
+								padding: 1rem;
+								margin: -1rem;
+								transition: all 100ms linear;
+							}
 
-              &:hover {
-                background-color: $primary2;
-                color: $primary4;
+							&:hover {
+								background-color: $primary2;
+								color: $primary4;
 
-                a {
-                  color: $primary4;
-                }
-              }
-            }
+								a {
+									color: $primary4;
+								}
+							}
+						}
 
-            @include xl {
-              flex-direction: row;
-            }
-          }
+						@include xl {
+							flex-direction: row;
+						}
+					}
 
-          @include xl {
-            display: block;
-          }
-        }
-      }
+					@include xl {
+						display: block;
+					}
+				}
+			}
 
-      .action-button {
-        @include button-primary;
-        display: none;
+			.action-button {
+				@include button-primary;
+				display: none;
 
-        @include lg {
-          display: flex;
-        }
-        @include xl {
-          display: flex;
-          order: 2;
-        }
-      }
+				@include lg {
+					display: flex;
+				}
+				@include xl {
+					display: flex;
+					order: 2;
+				}
+			}
 
-      @include xl {
-        display: flex !important;
-        gap: 1rem;
-        justify-content: space-between;
-      }
-    }
+			@include xl {
+				display: flex !important;
+				gap: 1rem;
+				justify-content: space-between;
+			}
+		}
 
-    .nav-open {
-      .nav-toggler {
-        z-index: 2000;
+		.nav-open {
+			.nav-toggler {
+				z-index: 2000;
 
-        &__icon {
-          transform: rotate(45deg);
-        }
+				&__icon {
+					transform: rotate(45deg);
+				}
 
-        &__icon:first-child {
-          opacity: 0;
-        }
-        &__icon:last-child {
-          transform: rotate(135deg) translateX(-6px) translateY(5px);
-        }
-      }
+				&__icon:first-child {
+					opacity: 0;
+				}
+				&__icon:last-child {
+					transform: rotate(135deg) translateX(-6px) translateY(5px);
+				}
+			}
 
-      .navigation {
-        position: absolute;
-        padding: 3.5rem 0;
-        width: -webkit-fill-available;
-        display: flex;
-        flex-direction: column;
-        background-image: linear-gradient(-65deg, $accent3, $accent4);
+			.navigation {
+				position: absolute;
+				padding: 3.5rem 0;
+				width: -webkit-fill-available;
+				display: flex;
+				flex-direction: column;
+				background-image: linear-gradient(65deg, $primary4, $accent4);
 
-        .navigation__wrapper {
-          display: flex !important;
-          width: 50%;
+				.navigation__wrapper {
+					display: flex !important;
+					width: 50%;
 
-          &__list {
-            width: 100%;
-            flex-direction: column;
+					&__list {
+						width: 100%;
+						flex-direction: column;
 
-            &__item {
-              width: 100%;
-            }
-          }
-        }
+						&__item {
+							width: 100%;
+						}
+					}
+				}
 
-        @include lg {
-          padding-top: 4rem;
-        }
-      }
-    }
-  }
+				@include lg {
+					padding-top: 4rem;
+				}
+			}
+		}
+	}
 }

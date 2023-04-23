@@ -1,0 +1,112 @@
+@import "../utilities/variables.scss";
+
+footer {
+	padding: 4rem 0;
+	background-image: linear-gradient(55deg, $primary4, $primary3);
+
+	.container {
+		.footer-wrapper {
+			display: flex;
+			flex-direction: column;
+			gap: 4rem;
+
+			.partner-logos {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 2rem;
+				justify-content: center;
+
+				a {
+					padding: 2rem 3rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					box-shadow: 2px 2px 6px $primary4-hover;
+					transition: all 300ms ease-in-out;
+					width: -webkit-fill-available;
+
+					img {
+						max-width: 70%;
+						height: auto;
+					}
+
+					&:hover {
+						background-image: linear-gradient(70deg, $primary3, $primary4);
+					}
+
+					@include md {
+						width: calc(35% - 2rem);
+					}
+
+					@include xl {
+						width: calc(40% - 2rem);
+					}
+				}
+			}
+
+			.social {
+				display: flex;
+				flex-direction: column;
+				gap: 2.5rem;
+
+				&__icons {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					gap: 1rem;
+					flex-wrap: wrap;
+
+					.fa {
+						background-color: $primary1;
+						box-shadow: 2px 2px 6px $primary4-hover;
+						padding: 1rem;
+						color: $primary4;
+						font-size: 2rem;
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						transition: all 100ms ease-in-out;
+						overflow: hidden;
+
+						&:hover {
+							background-color: $primary4-hover;
+							color: $primary1;
+							transform: scale(1.2);
+						}
+
+						@include lg {
+							&:hover {
+								transform: scale(1.5);
+							}
+						}
+					}
+
+					@include lg {
+						gap: 2.25rem;
+					}
+				}
+
+				&__desc {
+					width: 80%;
+					margin: 0 auto;
+					text-align: center;
+					color: $white;
+					font-weight: 200;
+
+					@include lg {
+						width: 60%;
+					}
+				}
+			}
+
+			.privacy {
+				text-align: center;
+				color: $white;
+				font-weight: 200;
+			}
+		}
+	}
+}
