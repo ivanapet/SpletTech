@@ -3,8 +3,7 @@ $primary1: #d4f1f4;
 $primary2: #75e6da;
 $primary3: #189ab4;
 $primary4: #05445e;
-$primary4-darker: #032d3f;
-
+$primary4-darker: #03364c;
 $primary4-hover: #03334887;
 
 $accent1: #fff4bd;
@@ -69,25 +68,47 @@ $breakpoints: (
 //  text mixins
 @mixin h1 {
   font-size: 2.625rem;
+  line-height: 4.5rem;
   font-family: $brunoAce;
 
   @include md {
     font-size: 3rem;
+    line-height: 4.625rem;
   }
   @include xl {
     font-size: 3.5rem;
+    line-height: 4.725rem;
+  }
+}
+
+@mixin h2 {
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  font-family: $raleway;
+
+  @include md {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+  @include xl {
+    font-size: 2.25rem;
+    line-height: 3rem;
   }
 }
 
 @mixin h3 {
   font-size: 1.5rem;
+  line-height: 2.725rem;
   font-family: $raleway;
 
   @include md {
     font-size: 2rem;
+    line-height: 2.725rem;
   }
+
   @include xl {
-    font-size: 1.75rem;
+    font-size: 2.75rem;
+    line-height: 3.5rem;
   }
 }
 
@@ -98,9 +119,43 @@ $breakpoints: (
 
   @include sm {
     font-size: 1rem;
+    line-height: 2rem;
   }
+
   @include lg {
     font-size: 1.5rem;
     line-height: 2.25rem;
+  }
+}
+
+// button mixins
+@mixin button-primary {
+  width: auto;
+  padding: 1rem;
+  background-color: $accent1;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 100ms linear;
+  outline: none;
+  height: fit-content;
+  cursor: pointer;
+
+  &__text {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $primary4;
+    text-transform: uppercase;
+  }
+
+  &:hover {
+    background-color: $accent2;
+  }
+
+  @include md {
+    width: fit-content;
+    padding: 1rem 2rem;
   }
 }

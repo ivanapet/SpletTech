@@ -2,7 +2,7 @@
 
 main {
   .apply {
-    &__info {
+    &__wrapper {
       display: flex;
       flex-direction: column;
       padding: 5rem 0;
@@ -25,7 +25,6 @@ main {
       &__img {
         flex: 1;
         min-height: 300px;
-        z-index: 1000;
         overflow: hidden;
 
         img {
@@ -47,6 +46,46 @@ main {
 
       @include lg {
         flex-direction: row;
+      }
+    }
+  }
+
+  .info {
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+
+      padding: 5rem 0;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2.5rem;
+
+      &__content {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 2rem;
+        color: $primary1;
+
+        &__button {
+          @include button-primary;
+        }
+
+        h2 {
+          @include h2;
+        }
+
+        p {
+          @include p;
+        }
+
+        @include lg {
+          gap: 3rem;
+        }
+      }
+
+      @include lg {
+        width: 50%;
       }
     }
   }
